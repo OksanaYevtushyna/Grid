@@ -1,0 +1,37 @@
+.main-content {
+	display: grid;
+	grid-template-columns: repeat (5, 1fr);
+	grid-template-rows: [header] 60px [sidebar-left] 1fr [content1] 2fr [content2] 3fr [sidebar-right] 1fr [footer] 1fr;
+	width: 100vw;
+	height: 100vh;
+}
+header {
+	grid-column: span 5;
+	grid-row: header;
+	background-color: gray;
+}
+.sidebar-left {
+	grid-column: span 1 / span 2;
+	grid-row: 2 / 6;
+	background-color: #3AE2CE; 
+}
+.content1 {
+    grid-column: span 2 / span 5;
+    grid-row: 2 /4;
+    background-color: #55FDE9;
+}
+.content2 {
+	grid-column: span 2 / span 5;
+	grid-row: 4 / 6;
+	background-color: #A2B8B8;
+}
+.sidebar-right {
+	grid-column: span 1 / span 2;
+	grid-row: 2 / 6;
+	background-color: #D0FF00;
+}
+footer {
+	grid-column: span 6;
+	grid-row: footer;
+	background-color: #9C80B4;
+}
